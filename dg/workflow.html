@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.17.2">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RepoSense - Workflow</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -102,8 +102,9 @@
         <ul>
           <li>As we squash the commits when merging a PR, there is <mark>no need to follow a strict commit organization or write elaborate commit messages for each commit</mark>.<br>
             However, when pushing new commits to your PR branch, do clean up <em>new</em> commits (i.e., commits not yet pushed) e.g., delete temporary print statements added for debugging purposes.</li>
-          <li>You can refer to the <a href="/RepoSense/dg/architecture.html">Architecture</a> and the <a href="/RepoSense/dg/report.html">HTML Report</a> to learn about the design and implementation of RepoSense.</li>
-          <li>The sections below has more information about various stages of submitting a PR.</li>
+          <li>In the PR description, please propose a commit message to be used when the PR is merged eventually. The commit message should follow the guidelines given <a href="https://se-education.org/guides/guidelines/PRs.html">here</a>. You may refer to <a href="https://github.com/reposense/RepoSense/pull/1057">this PR</a> for an example.</li>
+          <li>You can refer to the <a href="/RepoSense/dg/architecture.html">Architecture</a> and the <a href="/RepoSense/dg/report.html">HTML Report</a> sections to learn about the design and implementation of RepoSense.</li>
+          <li>The section below has more information about the various stages of submitting a PR.</li>
         </ul>
 
         <h2 id="following-the-code-style"><span id="following-the-code-style" class="anchor"></span>Following the code style<a class="fa fa-anchor" href="#following-the-code-style" onclick="event.stopPropagation()"></a></h2>
@@ -172,15 +173,20 @@
         <p><strong>We use <a href="https://www.cypress.io/">Cypress</a> for automated end-to-end front-end testing.</strong></p>
         <h3 id="writing-tests"><span id="writing-tests" class="anchor"></span>Writing tests<a class="fa fa-anchor" href="#writing-tests" onclick="event.stopPropagation()"></a></h3>
         <ol>
-          <li>Create a new test file in <code class="hljs inline no-lang" v-pre>frontend/cypress/tests</code></li>
-          <li>At project root start <em>Cypress Test Runner</em> by running <code class="hljs inline no-lang" v-pre>gradlew cypress</code></li>
-          <li>On the top right hand corner, set <code class="hljs inline no-lang" v-pre>Chrome</code> as the default browser</li>
-          <li>Under <strong>Integration Tests</strong>, click on the newly created test file to run it
+          <li>Create a new test file in <code class="hljs inline no-lang" v-pre>frontend/cypress/tests</code>.</li>
+          <li>At project root start <em>Cypress Test Runner</em> by running <code class="hljs inline no-lang" v-pre>gradlew cypress</code>.</li>
+          <li>On the top right hand corner, set <code class="hljs inline no-lang" v-pre>Chrome</code> as the default browser.</li>
+          <li>Under <strong>Integration Tests</strong>, click on the newly created test file to run it.
             <a href="/RepoSense/images/cypress-test-runner.jpg" target="_self"><img src="/RepoSense/images/cypress-test-runner.jpg" alt class="img-fluid" title="Cypress Test Runner"></a>
           </li>
         </ol>
         <box type="info" seamless>
           <p>Read <a href="https://docs.cypress.io/api/commands/document.html#Syntax">Cypress's Documentation</a> to familiarize yourself with its syntax and <a href="https://docs.cypress.io/guides/guides/debugging.html#Log-Cypress-events">Cypress's debugging guide</a> to tackle problems with your tests.
+          </p>
+        </box>
+        <p></p>
+        <box type="warning" seamless>
+          <p>Note that it is <strong>compulsory</strong> to add tests for the new front-end changes that you made to prevent regression bugs, except for trivial changes that are unlikely to cause any regression or other situations where testing does not apply to the change.
           </p>
         </box>
         <p></p>
@@ -226,7 +232,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 21:18:16 UTC]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Fri, Jan 15, 2021, 4:32:00 PM UTC]</small>
       </div>
     </footer>
   </div>
